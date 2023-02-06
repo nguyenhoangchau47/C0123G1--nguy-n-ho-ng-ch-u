@@ -5,17 +5,19 @@
     <title>form đăng kí</title>
 </head>
 <body>
-<form>
-    Họ Và tên:<br>
-    <input type="text" name="name"><br>
-    Email:<br>
-    <input type="text" name="Email"><br>
-    Số điện thoại:<br>
-    <input type="text" name="phone"><br>
-    Giới Tính:<br>
-    <input type="radio" name="gender" checked> Nam
-    <input type="radio" name="gender" checked> Nữ
-   <br> <input type="submit" value="Đăng kí">
+<form action="form đăng kí"; method="post">
+    <fieldset>
+     <label for="Fullname" > HỌ Và Tên: </label> <br>
+    <input type="text" id="Fullname" name="name"><br><br>
+    <label for="Email" > Email: </label> <br>
+    <input type="text" id="Email" name="Email"><br><br>
+    <label for="Phone" > Số điện thoại: </label> <br>
+    <input type="text" id="Phone" name="phone"><br><br>
+    <label for="gender" > Giới Tính: </label><br>
+    <input type="radio" id="gender" name="gender" checked> Nam
+    <input type="radio" id="gender" name="gender" checked> Nữ
+   <br><br> <input type="submit" value="Đăng kí">
+    </fieldset>
 </form>
 </body>
 </html>
