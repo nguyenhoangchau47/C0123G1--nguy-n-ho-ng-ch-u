@@ -2,9 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Chuyen doi tien te</title>
+
 </head>
 <body>
-$END$
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Curency</th>
+        <th>To Curency</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="number" id ="sotien1" />
+        </td>
+        <td>
+            <select name="tien1" id ="tien1">
+                <option>VND</option>
+                <option>USD</option>
+            </select>
+        </td>
+        <td>
+            <select name="tien1" id ="tien2">
+                <option>VND</option>
+                <option>USD</option>
+            </select>
+        </td>
+        <td>
+            <input type="button" value="Convert" onclick="chuyendoitiente()"/>
+        </td>
+    </tr>
+    <tr>
+   <td>
+       <label id="ketqua"></label>
+   </td>
+    </tr>
+</table>
 </body>
+<script type="application/javascript">
+
+    function chuyendoitiente() {
+        let x = document.getElementById("sotien1").value; // lay du lieu input
+        let y = document.getElementById("tien1").value; // lay du lieu input
+        let z = document.getElementById("tien2").value; // lay du lieu input
+        let bienketqua;
+        if(y == "USD" && z == "VND") {
+            bienketqua = x * 23000;
+        } else if (y == "VND" && z == "USD") {
+            bienketqua = x / 23000;
+        } else {
+            bienketqua = x
+        }
+        document.getElementById("ketqua").innerHTML = "Results:" + bienketqua + z // xuat output
+    }
+
+</script>
 </html>
