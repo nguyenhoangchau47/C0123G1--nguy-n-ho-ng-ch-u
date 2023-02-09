@@ -23,16 +23,20 @@
             case 7:
             case 10:
             case 12:
-            case 8:ketqua = 31;break;
-            case 2:ketqua = "28 hoặc 29";break;
+            case 8:ketqua = 31;
+                document.getElementById("ketqua").innerHTML = "Tháng " + x + " có " + ketqua + " ngày" ;
+                break;
+            case 2:ketqua = "28 hoặc 29";
+                document.getElementById("ketqua").innerHTML = "Tháng " + x + " có " + ketqua + " ngày" ;
+                break;
             case 9:
             case 11:
             case 4:
             case 6:ketqua = 30;break;
             default:ketqua="Vui long chon lai"
+                document.getElementById("ketqua").innerHTML =  ketqua  ;
                 break;
         }
-        document.getElementById("ketqua").innerHTML = "Tháng " + x + " có " + ketqua + " ngày" ;
 
     }
 </script>
