@@ -42,18 +42,18 @@
 <script type="application/javascript">
 
     function chuyendoitiente() {
-        let x = document.getElementById("sotien1").value; // lay du lieu input
-        let y = document.getElementById("tien1").value; // lay du lieu input
-        let z = document.getElementById("tien2").value; // lay du lieu input
+        let number1 = document.getElementById("sotien1").value; // lay du lieu input
+        let chuyendoi = document.getElementById("tien1").value; // lay du lieu input
+        let chuyendoi2  = document.getElementById("tien2").value; // lay du lieu input
         let bienketqua;
-        if(y == "USD" && z == "VND") {
-            bienketqua = x * 23000;
-        } else if (y == "VND" && z == "USD") {
-            bienketqua = x / 23000;
+        if(chuyendoi == "USD" && chuyendoi2 == "VND") {
+            bienketqua = number1 * 23000;
+        } else if (chuyendoi == "VND" && chuyendoi2 == "USD") {
+            bienketqua = number1 / 23000;
         } else {
-            bienketqua = x
+            bienketqua = number1;
         }
-        document.getElementById("ketqua").innerHTML = "Results:" + bienketqua + z // xuat output
+        document.getElementById("ketqua").innerHTML = "Results:" + bienketqua + chuyendoi2 // xuat output
     }
 
 </script>
