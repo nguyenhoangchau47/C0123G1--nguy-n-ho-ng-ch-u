@@ -29,31 +29,31 @@
             </select>
         </td>
         <td>
-            <input type="button" value="Convert" onclick="chuyendoitiente()"/>
+            <input type="button" value="Convert" onclick="chuyenDoiTienTe()"/>
         </td>
     </tr>
     <tr>
    <td>
-       <label id="ketqua"></label>
+       <label id="ketQua"></label>
    </td>
     </tr>
 </table>
 </body>
 <script type="application/javascript">
 
-    function chuyendoitiente() {
+    function chuyenDoiTienTe() {
         let number1 = document.getElementById("sotien1").value; // lay du lieu input
-        let chuyendoi = document.getElementById("tien1").value; // lay du lieu input
-        let chuyendoi2  = document.getElementById("tien2").value; // lay du lieu input
-        let bienketqua;
-        if(chuyendoi == "USD" && chuyendoi2 == "VND") {
-            bienketqua = number1 * 23000;
-        } else if (chuyendoi == "VND" && chuyendoi2 == "USD") {
-            bienketqua = number1 / 23000;
+        let chuyenDoi = document.getElementById("tien1").value; // lay du lieu input
+        let chuyenDoi2  = document.getElementById("tien2").value; // lay du lieu input
+        let bienKetQua;
+        if(chuyenDoi == "USD" && chuyenDoi2 == "VND") {
+            bienKetQua = number1 * 23000;
+        } else if (chuyenDoi == "VND" && chuyenDoi2 == "USD") {
+            bienKetQua = number1 / 23000;
         } else {
-            bienketqua = number1;
+            bienKetQua = number1;
         }
-        document.getElementById("ketqua").innerHTML = "Results:" + bienketqua + chuyendoi2 // xuat output
+        document.getElementById("ketqua").innerHTML = "Results:" + bienKetQua + chuyenDoi2 // xuat output
     }
 
 </script>

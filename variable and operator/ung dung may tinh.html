@@ -11,43 +11,43 @@
 <input type="number" id ="number1" placeholder="Nhập số thứ nhất" />
 <input type="number" id="number2" placeholder="Nhập số thứ hai"/>
 <br>
-<input type="button" value="Addition(+)"onclick="Addition()"/>
-<input type="button" value="Subtraction(-)" onclick="Subtraction()"/>
-<input type="button" value="Multiplication(*)" onclick="Multiplication()"/>
-<input type="button" value="Divion(/)" onclick="Divion()"/>
+<input type="button" value="Addition(+)"onclick="addition()"/>
+<input type="button" value="Subtraction(-)" onclick="subtraction()"/>
+<input type="button" value="Multiplication(*)" onclick="multiplication()"/>
+<input type="button" value="Divion(/)" onclick="divion()"/>
 <br/>
-Result:<label id="ketqua"></label>
+Result:<label id="ketQua"></label>
 
 </body>
 <script>
-    function Addition() {
+    function addition() {
         let numone = document.getElementById("number1").value;
         let numtwo = document.getElementById("number2").value;
 
         let bienKetQua;
         bienKetQua = Number(numone) + Number(numtwo);
-        document.getElementById("ketqua").innerHTML = bienKetQua
+        document.getElementById("ketQua").innerHTML = bienKetQua
     }
-    function Subtraction() {
+    function subtraction() {
         let numone = document.getElementById("number1").value;
         let numtwo = document.getElementById("number2").value;
         let bienKetQua;
         bienKetQua = Number(numone) - Number(numtwo);
-        document.getElementById("ketqua").innerHTML = bienKetQua
+        document.getElementById("ketQua").innerHTML = bienKetQua
     }
-    function Multiplication() {
+    function multiplication() {
         let numone = document.getElementById("number1").value;
         let numtwo = document.getElementById("number2").value;
         let bienKetQua;
         bienKetQua = Number(numone) * Number(numtwo);
-        document.getElementById("ketqua").innerHTML = bienKetQua
+        document.getElementById("ketQua").innerHTML = bienKetQua
     }
-    function Divion() {
+    function divion() {
         let numone = document.getElementById("number1").value;
         let numtwo = document.getElementById("number2").value;
         let bienKetQua;
         bienKetQua = Number(numone) / Number(numtwo);
-        document.getElementById("ketqua").innerHTML = bienKetQua
+        document.getElementById("ketQua").innerHTML = bienKetQua
     }
 </script>
 </html>
