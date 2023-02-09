@@ -2,9 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title> tim so lon nhat</title>
 </head>
 <body>
-$END$
+<h3>Tìm số lớn nhất trong 3 số</h3>
+Số thứ 1 :<input type="number" id="sothu1" placeholder="nhập số thứ 1"><br/>
+<br>
+Số thứ 2 :<input type="number" id="sothu2" placeholder="nhập số thứ 2"><br/>
+<br>
+Số thứ 3 :<input type="number" id="sothu3" placeholder="nhập số thứ 3"><br/>
+<br>
+<input type="button" onclick="kiemtra()" value="CHECK">
+<label id="ketQua"></label>
 </body>
+<script>
+    function kiemtra() {
+        let giaTri1 = Number(document.getElementById("sothu1").value)
+        let giaTri2 = Number(document.getElementById("sothu2").value)
+        let giaTri3 = Number(document.getElementById("sothu3").value)
+        let soLonNhat = giaTri1
+        if (giaTri1 > giaTri2 && giaTri1 > giaTri3) {
+            soLonNhat = giaTri1
+        } else {
+           if (giaTri2 > giaTri3) {
+               soLonNhat = giaTri2
+           } else {
+               soLonNhat = giaTri3
+           }
+        }
+        let ketQua = "Số lớn nhất là : " + soLonNhat
+        document.getElementById("ketQua").innerHTML = ketQua
+    }
+</script>
 </html>

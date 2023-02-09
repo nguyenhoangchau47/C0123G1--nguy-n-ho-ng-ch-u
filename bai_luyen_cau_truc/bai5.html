@@ -2,9 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title> Tinh nang luc hoc sinh</title>
 </head>
 <body>
-$END$
+<h3> Xếp loại học lực</h3>
+Điểm bài kiểm tra :<input type="number" id="sothu1" placeholder="Nhập điểm tại đây"><br/>
+<br>
+Điểm thi giữa kỳ :<input type="number" id="sothu2"placeholder="Nhập điểm tại đây"><br/>
+<br>
+Điểm thi cuối kỳ :<input type="number" id="sothu3"placeholder="Nhập điểm tại đây"><br/>
+<br>
+<input type="button" onclick="kiemTra()" value="Xếp Hạng">
+<label id="ketQua"></label>
 </body>
+<script>
+    function kiemTra() {
+        let diemKiemTra = Number(document.getElementById("sothu1").value)
+        let diemGiuaKy = Number(document.getElementById("sothu2").value)
+        let diemCuoiKy = Number(document.getElementById("sothu3").value)
+        let tongDiem = ((diemKiemTra+diemGiuaKy+diemCuoiKy)/3)
+        let ketQua =""
+        if (tongDiem<5) {
+            ketQua = tongDiem +  " điểm học sinh yếu"
+        } else if (tongDiem ==5) {
+            ketQua = tongDiem + " điểm Đạt học sinh trung bình"
+        } else if (tongDiem <8) {
+            ketQua = tongDiem +   " điểm Đạt học sinh khá"
+        } else {
+            ketQua = tongDiem +" điểm Đạt học sinh Giỏi"
+        }
+        document.getElementById("ketQua").innerHTML = "Tổng " + ketQua
+    }
+</script>
 </html>

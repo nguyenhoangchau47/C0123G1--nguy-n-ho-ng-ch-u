@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title> Tinh tien dien</title>
 </head>
 <body>
-$END$
+Don gia<input type="number" id="sothu1"> vnd<br/>
+So chu dien su dung <input type="number" id="sothu2"><br/>
+<input type="button" onclick="kiemtra()" value="Tinh tien dien">
+<label id="ketqua"></label>
 </body>
+<script>
+    function kiemtra() {
+        let giatri1 = Number(document.getElementById("sothu1").value)
+        let giatri2 = Number(document.getElementById("sothu2").value)
+        let ketqua = giatri1*giatri2
+        document.getElementById("ketqua").innerHTML = ketqua + " vnd tien dien"
+    }
+</script>
 </html>

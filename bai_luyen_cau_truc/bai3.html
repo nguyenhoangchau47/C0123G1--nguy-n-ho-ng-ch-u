@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title> kiem tra so lon hon 0</title>
 </head>
 <body>
-$END$
+<h3>Kiểm tra số lớn hơn 0</h3>
+Số :<input type="number" id="sothu1" placeholder="Nhập số vào đây"><br/>
+<br>
+<input type="button" onclick="kiemtra()" value="check">
+<label id="ketqua"></label>
 </body>
+<script>
+    function kiemtra() {
+        let giatri1 = Number(document.getElementById("sothu1").value)
+        let ketqua = ""
+        if (giatri1 >= 0) {
+            ketqua = giatri1 +  " Lớn hơn hoặc bằng 0"
+
+        } else {
+            ketqua = giatri1 +  " nhỏ hơn 0"
+        }
+        console.log(ketqua)
+        document.getElementById("ketqua").innerHTML = ketqua
+    }
+</script>
 </html>

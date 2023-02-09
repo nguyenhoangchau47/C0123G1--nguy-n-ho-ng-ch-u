@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title> số chia cho 2</title>
 </head>
 <body>
-$END$
+<h3>kiểm tra số có chia hết cho nhau khong</h3>
+Số thứ 1 :<input type="number" id="sothu1"><br/>
+<br>
+Số thứ 2 :<input type="number" id="sothu2"><br/>
+<br>
+<input type="button" onclick="kiemtrachia()" value="Kiểm Tra">
+<label id="ketQua"></label>
 </body>
+<script>
+    function kiemtrachia() {
+        let giaTri1 = Number(document.getElementById("sothu1").value)
+        let giaTri2 = Number(document.getElementById("sothu2").value)
+        let ketQua = ""
+        if (giaTri1 % giaTri2 == 0) {
+            ketQua = giaTri1 +  " va " + giaTri2 + " chia hết"
+
+        } else {
+            ketQua = giaTri1 +  " va " + giaTri2 + " Không chia hết"
+        }
+        console.log(ketQua)
+        document.getElementById("ketQua").innerHTML = ketQua
+    }
+</script>
 </html>
