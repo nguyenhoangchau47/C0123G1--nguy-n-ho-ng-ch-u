@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Tính diện tích chữ nhật</title>
+    <script>
+        function result() {
+            let canhA =  Number(document.getElementById("canhA").value)
+            let canhB = Number(document.getElementById("canhB").value)
+            let ketQua = canhA*canhB
+            document.getElementById("ketQua").innerHTML = "Diện tích hình chữ nhật là : " + ketQua + " cm2"
+
+        }
+    </script>
 </head>
 <body>
-$END$
+<h3> Tính diện tích hình chữ nhật</h3>
+Nhập cạnh a :<input type="number" id="canhA" placeholder="Cạnh ngắn"> <br>
+<br>
+Nhập cạnh b :<input type="number" id="canhB" placeholder="cạnh dài"> <br>
+<br>
+<input type="button" value="result" id="result" onclick="result()">
+<label id="ketQua"></label>
+
 </body>
 </html>

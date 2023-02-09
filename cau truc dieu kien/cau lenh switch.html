@@ -2,9 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Câu lệnh switch</title>
 </head>
 <body>
-$END$
+<h2> Kiểm tra số ngày trong tháng</h2>
+<input type="number" id="month" placeholder="Nhập tháng">
+<input type="button" id="check" value="check" onclick="ketquaday()">
+<br>
+<label id="ketqua" >Đây là chỗ hiển thị kết quả</label>
+
 </body>
+<script>
+    function ketquaday() {
+        let x = Number(document.getElementById("month").value);
+        let ketqua =0
+        switch (x) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 10:
+            case 12:
+            case 8:ketqua = 31;break;
+            case 2:ketqua = "28 hoặc 29";break;
+            case 9:
+            case 11:
+            case 4:
+            case 6:ketqua = 30;break;
+            default:ketqua="Vui long chon lai"
+                break;
+        }
+        document.getElementById("ketqua").innerHTML = "Tháng " + x + " có " + ketqua + " ngày" ;
+
+    }
+</script>
 </html>

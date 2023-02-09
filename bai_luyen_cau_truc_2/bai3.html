@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Dien tich hinh vuong</title>
+    <script>
+       function result() {
+           let canhA =  Number(document.getElementById("canhA").value)
+           let ketQua = canhA*canhA
+           document.getElementById("ketqua").innerHTML = "Diện tích hình vuông là : " + ketQua + " cm2"
+
+}
+    </script>
 </head>
 <body>
-$END$
+<h3> Tính diện tích hình vuông</h3>
+Nhập cạnh a :<input type="number" id="canhA"> <br>
+<br>
+<input type="button" value="result" id="result" onclick="result()">
+<label id="ketQua"></label>
 </body>
 </html>

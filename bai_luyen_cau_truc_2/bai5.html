@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích tam giác vuông</title>
+</head>
+<body>
+<h3> Tính diện tích hình tam giác vuông</h3>
+Nhập cạnh a :<input type="number" id="canhA" placeholder="Cạnh A"> <br>
+<br>
+Nhập cạnh b :<input type="number" id="canhB" placeholder="cạnh B"> <br>
+<br>
+<input type="button" value="result" id="result" onclick="result()">
+<label id="ketQua"></label>
+</body>
+<script>
+    function result() {
+        let canhA =  Number(document.getElementById("canhA").value)
+        let canhB = Number(document.getElementById("canhB").value)
+        let ketQua = (canhA*canhB)/2
+        document.getElementById("ketQua").innerHTML = "Diện tích hình tam giác vuông là : " + ketQua + " cm2"
+
+    }
+</script>
+</html>

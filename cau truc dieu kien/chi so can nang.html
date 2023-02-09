@@ -2,9 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+
 </head>
 <body>
-$END$
+<h3> Tính Chỉ Số cân nặng</h3>
+Nhập cân nặng:(kg)<input type="number" id="weight">
+<br>
+Nhập chiều cao:(m)<input type="number" id="height">
+<br>
+<input type="button" value="check" onclick="Interpretation()" >
+<br>
+<label id="bmi"></label>
+<label id="loiKhuyen" style="font-weight: bold"></label>
 </body>
+<script>
+    function Interpretation() {
+        let weight = document.getElementById("weight").value;
+        let height = document.getElementById("height").value;
+        let bmi = weight / (Math.pow(height, 2));
+        let result = "";
+        if (bmi < 18.5) {
+            result = " Gầy cấp độ 3. gầy quá, ăn nhiều vào nhe"
+        } else if (bmi < 25.0) {
+            result = " Gầy cấp độ 2. Xin vía xin vía"
+        } else if (bmi < 30.0) {
+            result = " Bình thường"
+        } else if (bmi > 30.0) {
+            result = " béo phì rồi. ở đây bán thuốc giảm cân"
+        }
+        console.log(result)
+        document.getElementById("bmi").innerHTML = "chỉ số BMI là:" + bmi
+        document.getElementById("loiKhuyen").innerHTML = "Bạn " + result + "<img src=\"pik.gif\" width='40px' height='40px'/>"
+    }
+</script>
 </html>
