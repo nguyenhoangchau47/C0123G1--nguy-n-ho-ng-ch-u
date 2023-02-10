@@ -17,11 +17,11 @@ Lãi suất 1 tháng :<br><input type="number" id="soC"placeholder="Nhập vào 
 </body>
 <script>
     function result() {
-        let soA = Number(document.getElementById("soA").value)
-        let soB = Number(document.getElementById("soB").value)
-        let soC = Number(document.getElementById("soC").value)
-        let soTienLai = soA * Math.pow( (1+ soC),soB)
-         document.getElementById("ketQua").innerHTML = "Số tiền phải trả : "+soTienLai + "VND"
+        let soA = Number(document.getElementById("soA").value);
+        let soB = Number(document.getElementById("soB").value);
+        let soC = Number(document.getElementById("soC").value);
+        let soTienLai = soA * Math.pow( (1+ soC),soB);
+         document.getElementById("ketQua").innerHTML = "Số tiền phải trả : "+soTienLai + "VND";
 
     }
 </script>

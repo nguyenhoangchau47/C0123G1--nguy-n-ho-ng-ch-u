@@ -13,29 +13,29 @@ Nhập tiền lương :<input type="number" id="soThu1"placeholder="Nhập vào 
 </body>
 <script>
     function kiemtra() {
-        let giaTri1 = Number(document.getElementById("soThu1").value)
-        let ketQua = " "
+        let giaTri1 = Number(document.getElementById("soThu1").value);
+        let ketQua = " ";
         if (giaTri1 <=5000000) {
-            ketQua = giaTri1 * 0.05
-            document.getElementById("ketQua").innerHTML = "Tiền thuế là: "+ketQua + " vnd"
+            ketQua = giaTri1 * 0.05;
+            document.getElementById("ketQua").innerHTML = "Tiền thuế là: "+ketQua + " vnd";
         }else if (giaTri1 >=6000000 && giaTri1 <= 10000000){
-            ketQua = giaTri1 * 0.1
-            document.getElementById("ketQua").innerHTML = "Tiền thuế là: "+ketQua + " vnd"
+            ketQua = giaTri1 * 0.1;
+            document.getElementById("ketQua").innerHTML = "Tiền thuế là: "+ketQua + " vnd";
         } else if ( giaTri1 >=10000000 && giaTri1 <= 18000000){
-            ketQua = giaTri1 * 0.15
-            document.getElementById("ketQua").innerHTML = "Tiền thuế là: "+ketQua + " vnd"
+            ketQua = giaTri1 * 0.15;
+            document.getElementById("ketQua").innerHTML = "Tiền thuế là: "+ketQua + " vnd";
         } else if ( giaTri1 >=18000000 && giaTri1 <= 32000000){
-            ketQua = giaTri1 * 0.2
-            document.getElementById("ketQua").innerHTML = "Tiền thuế là: "+ketQua + " vnd"
+            ketQua = giaTri1 * 0.2;
+            document.getElementById("ketQua").innerHTML = "Tiền thuế là: "+ketQua + " vnd";
         } else if ( giaTri1 >=32000000 && giaTri1 <= 52000000){
-            ketQua = giaTri1 * 0.25
-            document.getElementById("ketQua").innerHTML = "Tiền thuế là: "+ketQua + " vnd"
+            ketQua = giaTri1 * 0.25;
+            document.getElementById("ketQua").innerHTML = "Tiền thuế là: "+ketQua + " vnd";
         } else if ( giaTri1 >=52000000 && giaTri1 <= 80000000) {
-            ketQua = giaTri1 * 0.3
-            document.getElementById("ketQua").innerHTML = "Tiền thuế là: "+ketQua + " vnd"
+            ketQua = giaTri1 * 0.3;
+            document.getElementById("ketQua").innerHTML = "Tiền thuế là: "+ketQua + " vnd";
         } else {
-            ketQua = giaTri1 *0.35
-            document.getElementById("ketQua").innerHTML = "Tiền thuế là: "+ketQua + " vnd"
+            ketQua = giaTri1 *0.35;
+            document.getElementById("ketQua").innerHTML = "Tiền thuế là: "+ketQua + " vnd";
         }
 
     }

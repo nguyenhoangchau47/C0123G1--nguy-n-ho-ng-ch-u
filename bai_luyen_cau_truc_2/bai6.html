@@ -14,16 +14,16 @@ số b <input type="number" id="soB"placeholder="Nhập số B"><br>
 </body>
 <script>
     function result() {
-        let soA =  Number(document.getElementById("soA").value)
-        let soB = Number(document.getElementById("soB").value)
+        let soA =  Number(document.getElementById("soA").value);
+        let soB = Number(document.getElementById("soB").value);
         //  ax + b = 0 -> ax = -b -> x = -b/a
-        let ketQua = -(soB/soA)
+        let ketQua = -(soB/soA);
         if (soA==0 && soB==0) {
-            document.getElementById("ketQua").innerHTML = "Phương trình vô số nghiệm"
+            document.getElementById("ketQua").innerHTML = "Phương trình vô số nghiệm";
         } else if (soA==0 && soB!==0) {
-            document.getElementById("ketQua").innerHTML = "Phương trình vô nghiệm"
+            document.getElementById("ketQua").innerHTML = "Phương trình vô nghiệm";
         } else
-            document.getElementById("ketQua").innerHTML = "Phương trình có nghiệm là" + ketQua
+            document.getElementById("ketQua").innerHTML = "Phương trình có nghiệm là" + ketQua;
     }
 </script>
 </html>

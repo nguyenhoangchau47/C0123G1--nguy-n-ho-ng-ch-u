@@ -17,24 +17,24 @@ số c :<input type="number" id="soC"placeholder="Nhập số C"><br>
 </body>
 <script>
     function result() {
-        let soA = Number(document.getElementById("soA").value)
-        let soB = Number(document.getElementById("soB").value)
-        let soC = Number(document.getElementById("soC").value)
+        let soA = Number(document.getElementById("soA").value);
+        let soB = Number(document.getElementById("soB").value);
+        let soC = Number(document.getElementById("soC").value);
         let delta = Math.pow(soB, 2) - 4 * soA * soC;
-        console.log(delta)
-        console.log(Math.sqrt(delta))
-        let x1,x2
+        console.log(delta);
+        console.log(Math.sqrt(delta));
+        let x1,x2;
         if (soA == 0) {
-            document.getElementById("ketQua").innerHTML = "A phai khac 0"
+            document.getElementById("ketQua").innerHTML = "A phai khac 0";
         } else if (delta < 0) {
-            document.getElementById("ketQua").innerHTML = "Phương trình vô nghiệm"
+            document.getElementById("ketQua").innerHTML = "Phương trình vô nghiệm";
         } else if (delta == 0) {
             x1 = x2 = -soB/2*soA;
-            document.getElementById("ketQua").innerHTML = "Phương trình có nghiệm kép : x1 = x2 =" +x1
+            document.getElementById("ketQua").innerHTML = "Phương trình có nghiệm kép : x1 = x2 =" +x1;
         } else {
-            x1 = (-soB + Math.sqrt(delta))/(2*soA)
-            x2 = (-soB - Math.sqrt(delta))/(2*soA)
-            document.getElementById("ketQua").innerHTML = "Phương trình có nghiệm  x1 =" +x1 + " va x2 = " + x2
+            x1 = (-soB + Math.sqrt(delta))/(2*soA);
+            x2 = (-soB - Math.sqrt(delta))/(2*soA);
+            document.getElementById("ketQua").innerHTML = "Phương trình có nghiệm  x1 =" +x1 + " va x2 = " + x2;
         }
     }
 </script>

@@ -17,17 +17,17 @@ số c :<input type="number" id="soC"placeholder="Nhập số vào đây"><br>
 </body>
 <script>
     function result() {
-        let soA = Number(document.getElementById("soA").value)
-        let soB = Number(document.getElementById("soB").value)
-        let soC = Number(document.getElementById("soC").value)
-        let dieuKien1 = soA > 0 && soB > 0 && soC > 0
-        let dieuKien2 = (soA + soB) > soC
-        let dieuKien3 = (soB + soC) > soA
-        let dieuKien4 = (soA + soC) > soB
+        let soA = Number(document.getElementById("soA").value);
+        let soB = Number(document.getElementById("soB").value);
+        let soC = Number(document.getElementById("soC").value);
+        let dieuKien1 = soA > 0 && soB > 0 && soC > 0;
+        let dieuKien2 = (soA + soB) > soC;
+        let dieuKien3 = (soB + soC) > soA;
+        let dieuKien4 = (soA + soC) > soB;
         if (dieuKien1 && dieuKien2 && dieuKien3 && dieuKien4) {
-            document.getElementById("ketQua").innerHTML = "a,b,c là cạnh của một tam giác"
+            document.getElementById("ketQua").innerHTML = "a,b,c là cạnh của một tam giác";
         } else
-         document.getElementById("ketQua").innerHTML = "a,b,c không phải là cạnh của một tam giác"
+         document.getElementById("ketQua").innerHTML = "a,b,c không phải là cạnh của một tam giác";
 
     }
 </script>

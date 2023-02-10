@@ -13,12 +13,12 @@ Số A :<input type="number" id="soA" placeholder="Nhập số tuổi vào đây
 </body>
 <script>
     function result() {
-        let soA =  Number(document.getElementById("soA").value)
-        let dieuKien = Number.isInteger(soA)
+        let soA =  Number(document.getElementById("soA").value);
+        let dieuKien = Number.isInteger(soA);
         if (dieuKien && soA >0 && soA <120 ) {
-            document.getElementById("ketQua").innerHTML = "Đây là số tuổi một người"
+            document.getElementById("ketQua").innerHTML = "Đây là số tuổi một người";
         } else {
-            document.getElementById("ketQua").innerHTML =  "Đây không phải là số tuổi một người"
+            document.getElementById("ketQua").innerHTML =  "Đây không phải là số tuổi một người";
         }
     }
 </script>
