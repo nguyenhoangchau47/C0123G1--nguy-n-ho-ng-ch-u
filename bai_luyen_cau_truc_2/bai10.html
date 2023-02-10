@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Tính giá điện</title>
+    <style >
+        form {
+            background: khaki;
+            text-align: center;
+        }
+        h3 {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <fieldset>
+
+<h3>Tính tiền điện sử dụng</h3>
+Số chữ điện sử dụng : <br>
+<input type="number" id="sodien"><br/>
+<br>
+<input type="button" onclick="kiemtra()" value="Tính giá điện">
+<br>
+<label id="ketQua"></label>
+</fieldset>
+</form>
+</body>
+<script>
+    function kiemtra() {
+        let sodien = Number(document.getElementById("sodien").value)
+        let ketQua = " "
+        if (sodien >= 0 && sodien < 50) {
+            ketQua = sodien * 1484
+            document.getElementById("ketQua").innerHTML = "Số điện của bạn là :" + ketQua + "VND"
+        } else if (sodien >= 51 && sodien < 100) {
+            ketQua = sodien * 1533
+            document.getElementById("ketQua").innerHTML = "Số điện của bạn là :" + ketQua + "VND"
+        } else if (sodien >= 101 && sodien < 200) {
+            ketQua = sodien * 1786
+            document.getElementById("ketQua").innerHTML = "Số điện của bạn là :" + ketQua + "VND"
+        } else if (sodien >= 201 && sodien < 300) {
+            ketQua = sodien * 2242
+            document.getElementById("ketQua").innerHTML = "Số điện của bạn là :" + ketQua + "VND"
+        } else if (sodien >= 301 && sodien < 400) {
+            ketQua = sodien * 2503
+            document.getElementById("ketQua").innerHTML = "Số điện của bạn là :" + ketQua + "VND"
+        } else {
+            ketQua = sodien * 2587
+            document.getElementById("ketQua").innerHTML = "Số điện của bạn là :" + ketQua + "VND"
+        }
+
+    }
+</script>
+</html>

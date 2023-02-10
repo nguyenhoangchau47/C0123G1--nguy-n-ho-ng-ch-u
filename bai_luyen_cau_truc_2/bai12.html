@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi ngân hàng</title>
+</head>
+<body>
+<h3> Tính lãi kép</h3>
+Số tiền vay :<br><input type="number" id="soA" placeholder="Nhập vào đây"> VND<br/>
+<br>
+Số tháng :<br><input type="number" id="soB"placeholder="Nhập vào đây"><br/>
+<br>
+Lãi suất 1 tháng :<br><input type="number" id="soC"placeholder="Nhập vào đây"> %<br/>
+<br>
+<input type="button" value="result" id="result" onclick="result()">
+<label id="ketQua"></label>
+</body>
+<script>
+    function result() {
+        let soA = Number(document.getElementById("soA").value)
+        let soB = Number(document.getElementById("soB").value)
+        let soC = Number(document.getElementById("soC").value)
+        let soTienLai = soA * Math.pow( (1+ soC),soB)
+         document.getElementById("ketQua").innerHTML = "Số tiền phải trả : "+soTienLai + "VND"
+
+    }
+</script>
+</html>

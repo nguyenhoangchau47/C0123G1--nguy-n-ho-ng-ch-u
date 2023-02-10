@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Giải phương trình bậc 1</title>
 </head>
 <body>
-<h3> Giải phương trình bậc 1</h3>
-<input type="number" id="soA">
-<input type="number" id="soB">
+<h3> Giải phương trình bậc 1 ( ax + b = 0 )</h3>
+số a <input type="number" id="soA" placeholder="Nhập số A">
+số b <input type="number" id="soB"placeholder="Nhập số B"><br>
+<br>
 <input type="button" value="result" id="result" onclick="result()">
 <label id="ketQua"></label>
 </body>
@@ -15,12 +16,14 @@
     function result() {
         let soA =  Number(document.getElementById("soA").value)
         let soB = Number(document.getElementById("soB").value)
-        let ketQua =" "
-        if (soA==0 && soB==0)
-            document.getElementById("ketQua").innerHTML = ketQua +  "Phương trình vô số nghiệm"
-        else if (a==0 && b)
-
-
+        //  ax + b = 0 -> ax = -b -> x = -b/a
+        let ketQua = -(soB/soA)
+        if (soA==0 && soB==0) {
+            document.getElementById("ketQua").innerHTML = "Phương trình vô số nghiệm"
+        } else if (soA==0 && soB!==0) {
+            document.getElementById("ketQua").innerHTML = "Phương trình vô nghiệm"
+        } else
+            document.getElementById("ketQua").innerHTML = "Phương trình có nghiệm là" + ketQua
     }
 </script>
 </html>
