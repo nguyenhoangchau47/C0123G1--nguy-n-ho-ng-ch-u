@@ -1,25 +1,32 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <title>bảng cửu chương</title>
+    <style>
+    </style>
 </head>
 
 <body>
-<h1>Bảng cửu chương</h1>
+
+
 <script>
-    let x, y, z;
-    x = "<table border='2' width='350' cellspacing='0' cellpadding='20'>";
-    for (y = 1; y <= 10; y++) {
-        x = x + "<tr>";
-        for (z = 1; z <= 10; z++) {
-            x = x + "<td>" + z + "*" + y + "=" + y * z + "</td>";
+    let result = "<table border=\"1\">"
+    for (let count1 = 1; count1 <= 10; count1++) {
+        result = result + "<tr>"
+        for (let count2 = 1; count2 <=10; count2++)
+        {
+            result = result + "<td>"
+            let bieuthuc =count2 + "*" + count1 + "=" + (count2*count1)
+            result = result + bieuthuc
+            result = result + "</td>"
         }
-        x = x + "</tr>";
+        result = result + " </tr>"
     }
-    x = x + "</table>";
-    document.write(x);
+    result = result + "</table>"
+    document.write(result)
+
 </script>
 </body>
 

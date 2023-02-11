@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyen to dau tien ( la so nguyen to < 100) </title>
+    <style>
+        table {
+            background: lightpink;
+        }
+    </style>
+</head>
+
+<body>
+<h1>Số nguyen to dau tien ( la so nguyen to < 100)</h1>
+<script>
+
+    let maxSoNguyenTo = 100
+    let ketQua = "2"
+    for (let soTuNhien = 3; soTuNhien < maxSoNguyenTo; soTuNhien++) {
+        let laSoNguyen = true;
+        for(let i = 2; i <= Math.sqrt(soTuNhien); i++){
+            if(soTuNhien % i == 0){
+                laSoNguyen = false
+                break;
+            }
+        }
+        if (laSoNguyen) {
+            ketQua = ketQua + "," + soTuNhien
+        }
+    }
+    document.write(ketQua);
+</script>
+</body>
+
+</html>

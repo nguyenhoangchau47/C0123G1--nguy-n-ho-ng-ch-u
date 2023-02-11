@@ -19,7 +19,7 @@
 
 <h3>Tính tiền điện sử dụng</h3>
 Số chữ điện sử dụng : <br>
-<input type="number" id="sodien"><br/>
+<input type="number" id="soDien"><br/>
 <br>
 <input type="button" onclick="kiemtra()" value="Tính giá điện">
 <br>
@@ -29,25 +29,25 @@ Số chữ điện sử dụng : <br>
 </body>
 <script>
     function kiemtra() {
-        let sodien = Number(document.getElementById("sodien").value);
+        let soDien = Number(document.getElementById("soDien").value);
         let ketQua = " ";
-        if (sodien >= 0 && sodien < 50) {
-            ketQua = sodien * 1484
+        if (soDien >= 0 && soDien < 50) {
+            ketQua = soDien * 1484
             document.getElementById("ketQua").innerHTML = "Số điện của bạn là :" + ketQua + "VND";
-        } else if (sodien >= 51 && sodien < 100) {
-            ketQua = sodien * 1533
+        } else if (soDien >= 51 && soDien < 100) {
+            ketQua = soDien * 1533
             document.getElementById("ketQua").innerHTML = "Số điện của bạn là :" + ketQua + "VND";
-        } else if (sodien >= 101 && sodien < 200) {
-            ketQua = sodien * 1786
+        } else if (soDien >= 101 && soDien < 200) {
+            ketQua = soDien * 1786
             document.getElementById("ketQua").innerHTML = "Số điện của bạn là :" + ketQua + "VND";
-        } else if (sodien >= 201 && sodien < 300) {
-            ketQua = sodien * 2242
+        } else if (soDien >= 201 && soDien < 300) {
+            ketQua = soDien * 2242
             document.getElementById("ketQua").innerHTML = "Số điện của bạn là :" + ketQua + "VND";
-        } else if (sodien >= 301 && sodien < 400) {
-            ketQua = sodien * 2503
+        } else if (soDien >= 301 && soDien < 400) {
+            ketQua = soDien * 2503
             document.getElementById("ketQua").innerHTML = "Số điện của bạn là :" + ketQua + "VND";
         } else {
-            ketQua = sodien * 2587
+            ketQua = soDien * 2587
             document.getElementById("ketQua").innerHTML = "Số điện của bạn là :" + ketQua + "VND";
         }
 
