@@ -12,21 +12,21 @@
 </head>
 
 <body>
-<h1>Số nguyen to dau tien ( la so nguyen to < 100)</h1>
+<h1>Số nguyên tố đầu tiên ( là số nguyên tố < 100)</h1>
 <script>
 
-    let maxSoNguyenTo = 100
-    let ketQua = "2"
-    for (let soTuNhien = 3; soTuNhien < maxSoNguyenTo; soTuNhien++) {
-        let laSoNguyen = true;
-        for(let i = 2; i <= Math.sqrt(soTuNhien); i++){
-            if(soTuNhien % i == 0){
-                laSoNguyen = false
+    let maxSoNguyenTo = 100;
+    let ketQua = " ";
+    for (let soTuNhien = 2; soTuNhien < maxSoNguyenTo; soTuNhien++) {
+        let laSoNguyenTo = true;
+        for(let i = 2; i < soTuNhien; i++){
+            if(soTuNhien % i === 0){
+                laSoNguyenTo = false;
                 break;
             }
         }
-        if (laSoNguyen) {
-            ketQua = ketQua + "," + soTuNhien
+        if (laSoNguyenTo) {
+            ketQua = ketQua + "," + soTuNhien;
         }
     }
     document.write(ketQua);

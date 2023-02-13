@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tong 20 so fibonaci dau tien</title>
+</head>
+
+<body>
+<h1> Tong 20 so fibonaci dau tien</h1>
+<script>
+    let soTruoc = 0;
+    let soTiepTheo = 1;
+    let tongFibonaci = 0
+    for (let count = 0; count < 20; count++) {
+        tongFibonaci = tongFibonaci + soTruoc;
+        let sum = soTruoc + soTiepTheo;
+        soTruoc = soTiepTheo;
+        soTiepTheo = sum;
+    }
+    document.write(tongFibonaci);
+</script>
+</body>
+
+</html>
