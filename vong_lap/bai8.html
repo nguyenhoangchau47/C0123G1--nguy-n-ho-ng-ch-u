@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="bat dau" onclick="start()">
+</body>
+<script>
+    function start() {
+        let number = prompt("Nhập số tối đa mà bạn chọn")
+        let numSoSanh = Math.floor(Math.random() * number);
+        console.log(numSoSanh);
+        let result = " Bạn đoán sai rồi "
+        for (let i = 0; i < 3; i++) {
+            let num2 = prompt("Nhập số bạn đoán")
+            if (num2 < numSoSanh) {
+                alert("số bạn đoán bé hơn")
+            } else if (num2 > numSoSanh) {
+                alert("số bạn đoán lớn hơn")
+            } else {
+                alert("bạn đoán đúng rồi")
+                result = "bạn đoán đúng rồi"
+                break;
+            }
+            if (i === 2) {
+                document.write("bạn đã hết lượt chơi"+",")
+            }
+        }
+        document.write(result)
+    }
+
+</script>
+</html>
