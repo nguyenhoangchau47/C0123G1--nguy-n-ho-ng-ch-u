@@ -6,21 +6,21 @@
 
 </head>
 <body>
-Nhap tu : <input type="text" id="giatri1" placeholder="nhap apple hoac pen hoac lemon"/>
-<input type="button" onclick="tudien()" value="Dich"/>
+Nhập từ : <input type="text" id="value1" placeholder="nhập từ vào đây"/>
+<input type="button" onclick="tuDien()" value="translate"/>
 <div id="result"></div>
 <script>
-    function tudien() {
-        let tiengAnhArr = ["apple","pen","lemon"]
-        let tiengVietArr = ["tao","but chi","chanh"]
-        let chieuDaiCuaMang = tiengAnhArr.length
-        let nguoiDungNhap = document.getElementById("giatri1").value
-        for (let index = 0; index < chieuDaiCuaMang; index++) {
-            let tuVungTiengAnh = tiengAnhArr[index]
-            if (tuVungTiengAnh == nguoiDungNhap) {
+    function tuDien() {
+        let englishArr = ["apple","pen","lemon","cat"]
+        let vietnameseArr = ["táo","bút chì","chanh","con mèo"]
+        let length1 = englishArr.length
+        let userInput = document.getElementById("value1").value
+        for (let index = 0; index < length1; index++) {
+            let vocabularyE = englishArr[index]
+            if (vocabularyE == userInput) {
                 // tim ra tu tieng viet
-                let tuVungTiengViet = tiengVietArr[index]
-                document.getElementById("result").innerHTML = tuVungTiengViet
+                let vocabularyV = vietnameseArr[index]
+                document.getElementById("result").innerHTML = vocabularyV
             }
         }
     }

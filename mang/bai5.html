@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+​
+</body>
+<script>
+    // NHAP CHUOI 10 SO
+    let mangSoNguyen = [10];
+    for (let i = 0; i < 10; i++) {
+        let phanTu = Number(prompt("Vui lòng nhập phần tử thứ " + (i + 1) + " / 10 phần tử"));
+        mangSoNguyen[i] = phanTu;
+    }
+    document.write("Mảng số nguyên " + mangSoNguyen);
+    document.write("<br/>");
+    document.write("-> Các số nguyên âm là : ");
+    for (let i = 0; i < mangSoNguyen.length; i++) {
+        if (mangSoNguyen[i] < 0) {
+            document.write(mangSoNguyen[i] + " ,");
+        }
+    }
+</script>
+</html>

@@ -2,24 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Bài 1</title>
 </head>
 <body>
 
 </body>
 <script>
-   let soNguyen = [9,77,20,33,44,55,1,2,3]
+    let mangSoNguyen = [9, 77, 20, 33, 44, 55, 1, 2, 3]
+    document.write("mảng số nguyên " + mangSoNguyen)
+    document.write("<br/>")
 
-    let length = soNguyen.length
+    document.write("-> số lớn hơn 10 là  : ")
 
-    for (let i=0;i<length;i++)
-    {
+    for (let i = 0; i < mangSoNguyen.length; i++) {
 
-        if (soNguyen[i] >= 10) {
-            document.write(soNguyen[i] + ",")
+        if (mangSoNguyen[i] >= 10) {
+            document.write(mangSoNguyen[i] + " ,")
         }
     }
-
     document.write("<br/>")
 </script>
 </html>

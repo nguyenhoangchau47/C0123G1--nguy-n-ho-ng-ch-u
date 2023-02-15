@@ -9,67 +9,38 @@
 <div id="result"></div>
 <script>
     /// bai 1
-    let tiengAnhArr = ["apple","pen","lemon"]
-    document.write("-----Bai 1--------<br/>");
-    document.write(tiengAnhArr.toString());
-    document.write("<br/>");
-    document.write(tiengAnhArr.join());
-    document.write("<br/>");
-    document.write(tiengAnhArr.join(','));
-    document.write("<br/>");
+    myColor = ["Red", "Green", "White", "Black"];
+    document.write(myColor.toString());
 
     // bai 2
-    let soNguoiDungNhap = prompt("Vui long nhap so");
-    let mangDuLieu = soNguoiDungNhap.toString()
-    let chieuDai =  mangDuLieu.length
-    let ketqua = []
-    ketqua.push(mangDuLieu[0])
-    // index = 0 da duoc tinh la ketqua
-    for(let index=1; index <chieuDai; index++)
-    {
-        let truoc = mangDuLieu[index-1]
-        let hienTai = mangDuLieu[index]
-        if(truoc%2==0 && hienTai %2 ==0)
-        {
-            ketqua.push('-', hienTai);
-        }
-        else
-        {
-            ketqua.push(hienTai);
+    let number = prompt("Nhập số");
+    let result = [number[0]];
+    for (let i = 1; i < number.length; i++) {
+        if ((number[i - 1] % 2 === 0) && (number[i] % 2 === 0)) {
+            result.push('-', number[i]);
+        } else {
+            result.push(number[i]);
         }
     }
-    document.write("-----Bai 2--------<br/>");
-    document.write(ketqua.join(""));
-    document.write("<br/>");
+    document.write(result.join(''));
+    document.write("<br>");
 
-    /// Bai 3 : lam giong bai tu dien
-    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    let LOWER = 'abcdefghijklmnopqrstuvwxyz';
-    let mangChuHoa = UPPER.toString()
-    let length2 = mangChuHoa.length
-    let mangChuThuong = LOWER.toString()
+    //bai3
 
-    let chuNguoiDungNhap = prompt("Vui long nhap chu");
-    let length1 = chuNguoiDungNhap.length
-    let ketQua2 = []
-
-    document.write("-----Bai3--------<br/>");
-    document.write(chuNguoiDungNhap)
-    document.write("<br/>");
-    for (let index = 0; index < length1; index++) {
-        let chuCai = chuNguoiDungNhap[index]
-        let chuCaiKetQua = chuCai
-        for(let c =0 ; c < length2; c++) {
-            let chuCaiThuong = mangChuThuong[c]
-            if (chuCaiThuong == chuCai) {
-                let chuCaiHoa = mangChuHoa[c]
-                chuCaiKetQua = chuCaiHoa
-            }
+    let capital = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let lowerCase = 'abcdefghijklmnopqrstuvwxyz';
+    let result1 = [];
+    let text = prompt("nhập chữ bạn muốn đổi")
+    for (let x = 0; x < text.length; x++) {
+        if (capital.indexOf(text[x]) !== -1) {
+            result1.push(text[x].toLowerCase());
+        } else if (lowerCase.indexOf(text[x]) !== -1) {
+            result1.push(text[x].toUpperCase());
+        } else {
+            result1.push(text[x]);
         }
-        ketQua2.push(chuCaiKetQua)
     }
-    document.write(ketQua2.join(""))
-    document.write("<br/>");
+    document.write(result1.join(''));
 </script>
 </body>
 </html>

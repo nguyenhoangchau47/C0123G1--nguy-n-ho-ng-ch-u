@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+​
+</body>
+<script>
+    let mangSoNguyen = [9,77,20,33,44,55,1,2,3]
+    document.write("mảng số nguyên : " + mangSoNguyen)
+    document.write("<br/>")
+    let max = mangSoNguyen[0]
+    let sum = 0
+    for (let i=0;i < mangSoNguyen.length;i++) {
+        if (mangSoNguyen[i] > max) {
+            max = mangSoNguyen[i]
+        }
+        sum = sum + mangSoNguyen[i]
+    }
+    let trungBinh  = sum/mangSoNguyen.length
+    document.write("-> số lớn nhát là " + max)
+    document.write("<br/>")
+    document.write("-> giá trị trung bình là " + trungBinh )
+    document.write("<br/>")
+</script>
+</html>
