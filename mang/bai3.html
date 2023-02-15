@@ -11,16 +11,16 @@
     let mangSoNguyen = [9,77,20,33,44,55,1,2,3]
     document.write("mảng số nguyên : " + mangSoNguyen)
     document.write("<br/>")
-    let max = mangSoNguyen[0]
-    let sum = 0
+    let soLonNhat = mangSoNguyen[0]
+    let tongSo = 0
     for (let i=0;i < mangSoNguyen.length;i++) {
-        if (mangSoNguyen[i] > max) {
-            max = mangSoNguyen[i]
+        if (mangSoNguyen[i] > soLonNhat) {
+            soLonNhat = mangSoNguyen[i]
         }
-        sum = sum + mangSoNguyen[i]
+        tongSo = tongSo + mangSoNguyen[i]
     }
-    let trungBinh  = sum/mangSoNguyen.length
-    document.write("-> số lớn nhát là " + max)
+    let trungBinh  = tongSo/mangSoNguyen.length
+    document.write("-> số lớn nhát là " + tongSo)
     document.write("<br/>")
     document.write("-> giá trị trung bình là " + trungBinh )
     document.write("<br/>")

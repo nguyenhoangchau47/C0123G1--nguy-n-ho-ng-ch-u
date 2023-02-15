@@ -11,17 +11,17 @@
     let mangSoNguyen = [9, 77, 20, 33, 44, 55, 1, 2, 3];
     document.write("Mảng số nguyên " + mangSoNguyen);
     document.write("<br/>");
-    let max = mangSoNguyen[0];
-    let locationMax = 0;
+    let soToiDa = mangSoNguyen[0];
+    let viTri = 0;
     for (let i = 0; i < mangSoNguyen.length; i++) {
-        if (mangSoNguyen[i] > max) {
-            max = mangSoNguyen[i];
-            locationMax = i;
+        if (mangSoNguyen[i] > soToiDa) {
+            soToiDa = mangSoNguyen[i];
+            viTri = i;
         }
     }
-    document.write("-> Số lớn nhất là " + max);
+    document.write("-> Số lớn nhất là " + soToiDa);
     document.write("<br/>");
-    document.write("vị trí số lớn nhất là : " + locationMax);
+    document.write("vị trí số lớn nhất là : " + viTri);
 
 </script>
 </html>
