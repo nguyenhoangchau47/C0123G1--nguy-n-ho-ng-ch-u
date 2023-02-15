@@ -5,13 +5,19 @@
     <title>bài 2</title>
 </head>
 <body>
-<h1>Nhiệt độ</h1>
 <script>
-    let nhietDo = 0
-    while (nhietDo < 20 || nhietDo > 100) {
-        nhietDo = Number(prompt("Vui Long nhap nhiet do tu 20 den 100"))
+    let nhietDo =prompt("thông tin nhiệt độ huện tại được nhập bởi người truy cập");
+    while (nhietDo<20||nhietDo>100 ) {
+        if (nhietDo < 20) {
+            nhietDo = prompt ("Yêu cầu người dùng tăng nhiệt độ");
+        } else if (nhietDo > 100) {
+            nhietDo = prompt ("Yêu cầu người dùng giảm nhiệt độ");
+        } else {
+            alert("Nhiệt độ bình thường");
+            break;
+        }
     }
-    document.write("Nhiệt độ là: " + nhietDo)
 </script>
+
 </body>
 </html>

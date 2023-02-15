@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Su dung cac ham san co cua mang</title>
+
+</head>
+<body>
+<div id="result"></div>
+<script>
+    /// bai 1
+    let tiengAnhArr = ["apple","pen","lemon"]
+    document.write("-----Bai 1--------<br/>");
+    document.write(tiengAnhArr.toString());
+    document.write("<br/>");
+    document.write(tiengAnhArr.join());
+    document.write("<br/>");
+    document.write(tiengAnhArr.join(','));
+    document.write("<br/>");
+
+    // bai 2
+    let soNguoiDungNhap = prompt("Vui long nhap so");
+    let mangDuLieu = soNguoiDungNhap.toString()
+    let chieuDai =  mangDuLieu.length
+    let ketqua = []
+    ketqua.push(mangDuLieu[0])
+    // index = 0 da duoc tinh la ketqua
+    for(let index=1; index <chieuDai; index++)
+    {
+        let truoc = mangDuLieu[index-1]
+        let hienTai = mangDuLieu[index]
+        if(truoc%2==0 && hienTai %2 ==0)
+        {
+            ketqua.push('-', hienTai);
+        }
+        else
+        {
+            ketqua.push(hienTai);
+        }
+    }
+    document.write("-----Bai 2--------<br/>");
+    document.write(ketqua.join(""));
+    document.write("<br/>");
+
+    /// Bai 3 : lam giong bai tu dien
+    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    let mangChuHoa = UPPER.toString()
+    let length2 = mangChuHoa.length
+    let mangChuThuong = LOWER.toString()
+
+    let chuNguoiDungNhap = prompt("Vui long nhap chu");
+    let length1 = chuNguoiDungNhap.length
+    let ketQua2 = []
+
+    document.write("-----Bai3--------<br/>");
+    document.write(chuNguoiDungNhap)
+    document.write("<br/>");
+    for (let index = 0; index < length1; index++) {
+        let chuCai = chuNguoiDungNhap[index]
+        let chuCaiKetQua = chuCai
+        for(let c =0 ; c < length2; c++) {
+            let chuCaiThuong = mangChuThuong[c]
+            if (chuCaiThuong == chuCai) {
+                let chuCaiHoa = mangChuHoa[c]
+                chuCaiKetQua = chuCaiHoa
+            }
+        }
+        ketQua2.push(chuCaiKetQua)
+    }
+    document.write(ketQua2.join(""))
+    document.write("<br/>");
+</script>
+</body>
+</html>

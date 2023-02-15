@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu dien</title>
+
+</head>
+<body>
+Nhap tu : <input type="text" id="giatri1" placeholder="nhap apple hoac pen hoac lemon"/>
+<input type="button" onclick="tudien()" value="Dich"/>
+<div id="result"></div>
+<script>
+    function tudien() {
+        let tiengAnhArr = ["apple","pen","lemon"]
+        let tiengVietArr = ["tao","but chi","chanh"]
+        let chieuDaiCuaMang = tiengAnhArr.length
+        let nguoiDungNhap = document.getElementById("giatri1").value
+        for (let index = 0; index < chieuDaiCuaMang; index++) {
+            let tuVungTiengAnh = tiengAnhArr[index]
+            if (tuVungTiengAnh == nguoiDungNhap) {
+                // tim ra tu tieng viet
+                let tuVungTiengViet = tiengVietArr[index]
+                document.getElementById("result").innerHTML = tuVungTiengViet
+            }
+        }
+    }
+</script>
+</body>
+</html>
