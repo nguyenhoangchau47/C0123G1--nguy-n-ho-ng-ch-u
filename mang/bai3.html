@@ -8,21 +8,21 @@
 ​
 </body>
 <script>
-    let mangSoNguyen = [9,77,20,33,44,55,1,2,3]
-    document.write("mảng số nguyên : " + mangSoNguyen)
-    document.write("<br>")
-    let soLonNhat = mangSoNguyen[0]
-    let tongSo = 0
+    let mangSoNguyen = [9,77,20,33,44,55,1,2,3];
+    document.write("mảng số nguyên : " + mangSoNguyen);
+    document.write("<br>");
+    let soLonNhat = mangSoNguyen[0];
+    let tongSo = 0;
     for (let i=0;i < mangSoNguyen.length;i++) {
         if (mangSoNguyen[i] > soLonNhat) {
-            soLonNhat = mangSoNguyen[i]
+            soLonNhat = mangSoNguyen[i];
         }
-        tongSo = tongSo + mangSoNguyen[i]
+        tongSo = tongSo + mangSoNguyen[i];
     }
-    let trungBinh  = tongSo/mangSoNguyen.length
-    document.write("-> số lớn nhát là " + tongSo)
-    document.write("<br>")
-    document.write("-> giá trị trung bình là " + trungBinh )
-    document.write("<br>")
+    let trungBinh  = tongSo/mangSoNguyen.length;
+    document.write("-> số lớn nhát là " + tongSo);
+    document.write("<br>");
+    document.write("-> giá trị trung bình là " + trungBinh );
+    document.write("<br>");
 </script>
 </html>

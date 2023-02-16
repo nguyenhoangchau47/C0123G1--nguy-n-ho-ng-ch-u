@@ -9,19 +9,19 @@
 </body>
 <script>
     // NHAP CHUOI 10 SO
-    let mangSoNguyen = [10]
+    let mangSoNguyen = [10];
     for (let i = 0; i < 10; i++) {
-        let phanTu = Number(prompt("Vui lòng nhập phần tử thứ " + (i + 1) + " / 10 phần tử"))
-        mangSoNguyen[i] = phanTu
+        let phanTu = Number(prompt("Vui lòng nhập phần tử thứ " + (i + 1) + " / 10 phần tử"));
+        mangSoNguyen[i] = phanTu;
     }
-    document.write("mảng số nguyên đã nhập  " + mangSoNguyen)
-    document.write("<br>")
-    let chieuDai = mangSoNguyen.length
-    let mangSoNguyenDaoNguoc = [chieuDai]
+    document.write("mảng số nguyên đã nhập  " + mangSoNguyen);
+    document.write("<br>");
+    let chieuDai = mangSoNguyen.length;
+    let mangSoNguyenDaoNguoc = [chieuDai];
     for (let i = 0; i < chieuDai; i++) {
-        mangSoNguyenDaoNguoc[chieuDai - i - 1] = mangSoNguyen[i]
+        mangSoNguyenDaoNguoc[chieuDai - i - 1] = mangSoNguyen[i];
     }
-    document.write("-> Mảng số nguyên đã được đảo ngược " + mangSoNguyenDaoNguoc)
-    document.write("<br>")
+    document.write("-> Mảng số nguyên đã được đảo ngược " + mangSoNguyenDaoNguoc);
+    document.write("<br>");
 </script>
 </html>
