@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai6</title>
+</head>
+<body>
+
+</body>
+<script>
+    let mangKyTu = prompt("Nhập mảng ký tự bất kỳ");
+    document.write("Mảng nhập vào: " + mangKyTu + "<br/>");
+    let ketQua = []
+    for (let i = 0; i < mangKyTu.length; i++) {
+        if (mangKyTu[i] === "-") {
+            ketQua.push("_");
+        } else {
+            ketQua.push(mangKyTu[i]);
+        }
+    }
+    document.write("Mảng sau khi thay (-) thành (_) vào : " + ketQua.join("") + "<br/>")
+</script>
+</html>

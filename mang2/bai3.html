@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+
+</body>
+<script>
+    let mangKyTu = prompt("Nhập mảng ký tự bất kỳ")
+    let demKyTuSo = 0
+    for (let i = 0; i < mangKyTu.length; i++) {
+        if (mangKyTu[i] >= '0' && mangKyTu[i] <= '9') {
+            demKyTuSo++
+        }
+    }
+    document.write("Mảng nhập vào: " + mangKyTu + "<br/>")
+    document.write("Số ký tự số đếm được là: " + demKyTuSo + "<br/>")
+</script>
+</html>

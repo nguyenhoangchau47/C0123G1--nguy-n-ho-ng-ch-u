@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+
+</body>
+<script>
+    let mangKyTu = prompt("Nhập mảng ký tự bất kỳ")
+    let demSo = 0
+    let kiemTra = true;
+    for (let i = 0; i < mangKyTu.length; i++) {
+        if (mangKyTu[i] === ' ') {
+            kiemTra = true;
+            continue;
+        } else if (kiemTra) {
+            demSo++;
+            kiemTra = false;
+        }
+    }
+    document.write("Mảng nhập vào: " + mangKyTu + "<br/>")
+    document.write("Số từ đếm được là: " + (demSo) + "<br/>")
+</script>
+</html>
