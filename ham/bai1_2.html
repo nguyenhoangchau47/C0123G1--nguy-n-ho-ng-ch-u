@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <script>
-        function binhPhuong(num) {
-            return Math.pow(num,2)
-        }
-    </script>
+    <title>bai1</title>
 </head>
 <body>
 <script>
-    document.write(binhPhuong(4))
+    function binhPhuong(number) {
+        return Math.pow(number,2);
+    }
+
+    let num=+prompt("Nhập số bất kỳ:");
+    let result = binhPhuong(num);
+    document.write("Bình phương của số bạn nhập: "+ result);
 </script>
 </body>
 

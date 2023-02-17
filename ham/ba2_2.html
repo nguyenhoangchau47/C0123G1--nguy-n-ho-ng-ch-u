@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>bai2</title>
-    <script>
-        function dienTichHinhTron(num) {
-            return Math.pow(num,2)*3.14
-        }
-        function chuViHinhTron(num) {
-            return num*2*3.14
-        }
-    </script>
+
 </head>
 <body>
 <script>
-    document.write(dienTichHinhTron(5)+"<br>");
-    document.write(chuViHinhTron(5));
+    let r = +prompt("Nhập bán kinh hình tròn");
+    let pi = 3.14;
+
+    function calculateCircle() {
+        let s = pi * r * r;
+        document.write("dien tich hinh tron la:" + s + "<br>");
+        let c = 2 * pi * r;
+        document.write("chu vi hinh tron la:" + c);
+        return;
+    }
+
+    calculateCircle();
 </script>
 </body>
 

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+<script>
+    function giaiThua(num) {
+        let result = 1;
+        for (let i = 1; i <= num; i++) {
+            result = result * i
+        }
+        return result;
+    }
+    let num = +prompt("Nhap so nguyen de tim giai thua");
+    document.write(giaiThua(num));
+</script>
+</body>
+</html>

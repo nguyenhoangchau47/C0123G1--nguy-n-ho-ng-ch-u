@@ -2,22 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <script>
-        function kiemtra(num1,num2) {
-            if (num1 > num2) {
-                alert(num1 + " > " + num2)
-                return ""
-            } else {
-                return num1 + num2
-            }
-        }
-    </script>
+    <title>bai3</title>
 </head>
 <body>
 <script>
-    document.write(kiemtra(6,5) + "<br/>")
-    document.write(kiemtra(5,6) + "<br/>")
+    function compare(a, b) {
+        if (a > b) {
+            alert("Số thứ nhất lớn hơn số thứ hai.");
+            return;
+        } else {
+            return a + b;
+        }
+    }
+
+    let numA = +prompt("Nhập số thứ nhất: ");
+    let numB = +prompt("Nhập số thứ hai: ");
+    let total = compare(numA, numB);
+    if (!isNaN(total)) {
+        document.write(total);
+    }
 </script>
 </body>
 
