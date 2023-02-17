@@ -11,16 +11,16 @@ Nhập từ : <input type="text" id="value1" placeholder="nhập từ vào đây
 <div id="result"></div>
 <script>
     function tuDien() {
-        let englishArr = ["apple","pen","lemon","cat"]
-        let vietnameseArr = ["táo","bút chì","chanh","con mèo"]
-        let length1 = englishArr.length
-        let userInput = document.getElementById("value1").value
+        let englishArr = ["apple","pen","lemon","cat"];
+        let vietnameseArr = ["táo","bút chì","chanh","con mèo"];
+        let length1 = englishArr.length;
+        let userInput = document.getElementById("value1").value;
         for (let index = 0; index < length1; index++) {
-            let vocabularyE = englishArr[index]
+            let vocabularyE = englishArr[index];
             if (vocabularyE == userInput) {
                 // tim ra tu tieng viet
-                let vocabularyV = vietnameseArr[index]
-                document.getElementById("result").innerHTML = vocabularyV
+                let vocabularyV = vietnameseArr[index];
+                document.getElementById("result").innerHTML = vocabularyV;
             }
         }
     }
