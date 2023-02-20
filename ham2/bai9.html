@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai9</title>
+</head>
+<body>
+<script>
+    function kiemTraSo(mang1, kyTu1) {
+        let demSo = 0;
+        for (let i = 0; i < mang1.length; i++) {
+            if (mang1[i] === kyTu1) {
+                demSo++;
+            }
+        }
+        if (demSo === 0) {
+            demSo = -1;
+        }
+        return demSo;
+    }
+
+    let mang = prompt("nhap vao mang");
+    let kyTu = prompt("nhap vao so");
+    document.write(kiemTraSo(mang, kyTu));
+</script>
+
+</body>
+</html>

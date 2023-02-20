@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    function kiemTra(num1, num2, num3) {
+        if (num1 < num2 && num1 < num3) {
+            return num1;
+        } else if (num2 < num3) {
+            return num2;
+        } else {
+            return num3;
+        }
+    }
+
+    let number1 = +prompt("nhap so thu nhat");
+    let number2 = +prompt("nhap so thu hai");
+    let number3 = +prompt("nhap so thu ba");
+    document.write(kiemTra(number1, number2, number3));
+
+</script>
+</body>
+</html>
