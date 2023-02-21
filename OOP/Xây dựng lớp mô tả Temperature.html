@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(doC) {
+            while (doC<-273){
+                 {
+                   doC = prompt("Nhiệt độ phải lớn hơn -273,mời nhập lại");
+                }
+            }
+            this.c = doC;
+        }
+        getDoC() {
+            return this.c;
+        }
+        getDoF() {
+            return 9/5 * this.c + 32;
+        }
+
+        getDoK() {
+            return this.c + 273.15;
+        }
+    }
+
+    let doC = +prompt("nhap do C");
+    let temp = new Temperature(doC);
+    document.write("Độ C: " + temp.getDoC() + "<br/>");
+    document.write("Độ F: " + temp.getDoF() + "<br/>");
+    document.write("Độ K: " + temp.getDoK() + "<br/>");
+</script>
+</body>
+</html>
