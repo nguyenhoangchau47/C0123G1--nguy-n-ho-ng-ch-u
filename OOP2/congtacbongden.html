@@ -5,62 +5,57 @@
     <title>Title</title>
 </head>
 <body>
-<input type="button" value="bật đèn" onclick="batDen()" id="batDen"/> <br/>;
-<input type="button" value="tắt đèn" onclick="tatDen()"id="tatDen"/> <br/>;
-<p id="result"></p>;
+<button id="swtBtn" onclick="changeBtn()">Bật</button>
 <script>
-    class ElectricLamp {
+    class Lamp {
         constructor(status) {
             this.status = status;
         }
 
-        getStatus() {
-            return this.status;
+        turnOn() {
+            this.status = true;
+            alert("Đèn bật.");
+        }
+
+        turnOff() {
+            this.status = false;
+            alert("Đèn tắt.");
         }
     }
 
     class SwitchButton {
-        constructor(lamp, status) {
+        constructor(status, lamp) {
             this.status = status;
             this.lamp = lamp;
         }
 
-        getLamp() {
-            return this.lamp;
-        }
-
-        setLamp(lamp) {
+        connectToLamp(lamp) {
             this.lamp = lamp;
         }
 
-        connectToLamp(Electriclamp) {
-            return this.lamp = Electriclamp;
+        switchOn() {
+            this.lamp.turnOn();
+            this.status = true;
         }
 
         switchOff() {
-            this.lamp.status = " Đèn Tắt";
-            return this.status = false;
-        }
-
-        switchOn() {
-            this.lamp.status = " Đèn Bật";
-            return this.status = true;
+            this.lamp.turnOff();
+            this.status = false;
         }
     }
 
-    let electricLamp_1 = new ElectricLamp(false);
-    let switchButton_1 = new SwitchButton(electricLamp_1, false); // kết nối giữa  công tắc 1 và đèn 1
+    let lamp = new Lamp(false);
+    let switchBtn = new SwitchButton(false, lamp);
 
-
-    function batDen() {
-        document.getElementById("result").innerHTML = "button is " + switchButton_1.switchOn() + "<br>" + "status: " + electricLamp_1.getStatus() + "<br>";
+    function changeBtn() {
+        if (!switchBtn.status) {
+            switchBtn.switchOn();
+            document.getElementById("swtBtn").innerText = "Tắt";
+        } else {
+            switchBtn.switchOff();
+            document.getElementById("swtBtn").innerText = "Bật";
+        }
     }
-
-    function tatDen() {
-        document.getElementById("result").innerHTML = "button is " + switchButton_1.switchOff() + "<br>" + "status: " + electricLamp_1.getStatus() + "<br>";
-    }
-
 </script>
-
 </body>
 </html>
